@@ -1,0 +1,15 @@
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/actool/_PartialAppManifest.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/actool/_BundleResourceWithLogicalName.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/actool/_ProcessedImageAssetsPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/coremlc/_PartialAppManifest.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/coremlc/_BundleResourceWithLogicalName.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/_ProcessedBundleResourcesPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/_ProcessedContentPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/CryptoEngine.csproj.AssemblyReference.cache
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/CryptoEngine.csproj.CoreCompileInputs.cache
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/bin/Release/CryptoEngine.dll
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/bin/Release/BouncyCastle.Cryptography.dll
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/bin/Release/BouncyCastle.Cryptography.xml
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/CryptoEngine.csproj.CopyComplete
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/CryptoEngine/CryptoEngine/obj/Release/CryptoEngine.dll
