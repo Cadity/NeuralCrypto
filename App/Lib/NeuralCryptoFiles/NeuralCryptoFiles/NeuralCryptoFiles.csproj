@@ -128,6 +128,11 @@
     <Reference Include="itext.bouncy-castle-fips-adapter">
       <HintPath>..\packages\itext7.bouncy-castle-fips-adapter.8.0.0\lib\netstandard2.0\itext.bouncy-castle-fips-adapter.dll</HintPath>
     </Reference>
+    <Reference Include="CryptoEngine">
+      <HintPath>..\..\CryptoEngine\CryptoEngine\bin\Release\CryptoEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

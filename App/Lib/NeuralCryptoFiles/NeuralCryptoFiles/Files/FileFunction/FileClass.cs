@@ -1,8 +1,25 @@
 ﻿using System;
 using NeuralCryptoFiles.Files.SignatureFile;
+using CryptoEngine.HashFunction;
 
 namespace NeuralCryptoFiles.Files.FileFunction
 {
+    public static class Hash_Section
+    {
+        public static string Make(string file)
+        {
+            var hash = SHAFunction.GetHash(file, "SHA512", "base64");
+            string beginHeader = "----- BEGIN NEURALCRYPTO FILE -----\n";
+            string endHeader = "\n----- END NEURALCRYPTO FILE -----";
+
+            return beginHeader + "Hash Section\n{\n\t" +
+                "Hash Function : SHA512\n\t" +
+                "Encoding : 0x64\n\t" +
+                "Hash : " + hash + "\n}\n" + file + endHeader;
+        }
+    }
+
+
 	public static class NeuralCrypto_Section
 	{
 		public static string Make()
@@ -18,9 +35,10 @@ namespace NeuralCryptoFiles.Files.FileFunction
 
     public static class FileIdentity_Section
     {
-        public static string Make(SignFileParameters parameters)
+        public static string Make(SignFileParameters parameters, string type)
         {
-            return "File Identity Section\n{\n\tType : SignatureFile\n\t" +
+            return "File Identity Section\n{\n\t" +
+                "Type : " + type + "\n\t" +
                 "Creation Date : " + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "\n\t" +
                 "Expiration Date : " + parameters.expirationDate.ToString("dd/MM/yyyy HH:mm") + "\n\t" +
                 "Author : " + parameters.author + "\n}";

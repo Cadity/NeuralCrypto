@@ -1,17 +1,29 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NeuralCryptoFiles/Files/FileFunction/FileClass.cs">
+    <Files>
+      <File FileName="NeuralCryptoFiles/Files/FileFunction/FileClass.cs" Line="13" Column="39" />
+      <File FileName="NeuralCryptoFiles/Files/SignatureFile/SignClass.cs" Line="17" Column="38" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="NeuralCryptoFiles" expanded="True" selected="True" />
+          <Node name="NeuralCryptoFiles" expanded="True">
+            <Node name="NeuralCryptoFiles" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Files" expanded="True">
+                <Node name="FileFunction" expanded="True" />
+                <Node name="SignatureFile" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

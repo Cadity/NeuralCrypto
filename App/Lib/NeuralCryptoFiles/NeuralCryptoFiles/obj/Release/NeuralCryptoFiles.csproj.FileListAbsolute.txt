@@ -63,3 +63,4 @@
 /Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/NeuralCryptoFiles/NeuralCryptoFiles/obj/Release/NeuralCryptoFiles.csproj.CoreCompileInputs.cache
 /Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/NeuralCryptoFiles/NeuralCryptoFiles/obj/Release/NeuralCryptoFiles.csproj.CopyComplete
 /Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/NeuralCryptoFiles/NeuralCryptoFiles/obj/Release/NeuralCryptoFiles.dll
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/Lib/NeuralCryptoFiles/NeuralCryptoFiles/bin/Release/CryptoEngine.dll
