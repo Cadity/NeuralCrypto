@@ -1,6 +1,7 @@
 ﻿using System;
 using NeuralCryptoFiles.Files.SignatureFile;
 using CryptoEngine.HashFunction;
+using System.Text.RegularExpressions;
 
 namespace NeuralCryptoFiles.Files.FileFunction
 {
@@ -17,8 +18,19 @@ namespace NeuralCryptoFiles.Files.FileFunction
                 "Encoding : 0x64\n\t" +
                 "Hash : " + hash + "\n}\n" + file + endHeader;
         }
-    }
 
+        public static void Read(string file)
+        {
+            // A terminer
+            Match match = Regex.Match(file, @"Hash Section\n{\n\tHash Function : (?<HashFunction>\w+)\n\tEncoding : (?<Encoding>\w+)\n\tHash : (?<Hash>[\w\/\+=]+)", RegexOptions.Singleline);
+            if (match.Success)
+            {
+                Console.WriteLine(match.Groups["HashFunction"]);
+                Console.WriteLine(match.Groups["Encoding"]);
+                Console.WriteLine(match.Groups["Hash"]);
+            }
+        }
+    }
 
 	public static class NeuralCrypto_Section
 	{
