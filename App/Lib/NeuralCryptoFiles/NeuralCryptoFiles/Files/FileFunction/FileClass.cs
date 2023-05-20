@@ -20,16 +20,43 @@ namespace NeuralCryptoFiles.Files.FileFunction
                 "Hash : " + hash + "\n}\n" + file + endHeader;
         }
 
-        public static void Read(string file)
+        public static (string, string, bool, string) Read(string file)
         {
-            // A terminer
+            // Order : Marked Hash, Real Hash, isValid (bool), Function
+
             Match match = Regex.Match(file, @"Hash Section\n{\n\tHash Function : (?<HashFunction>\w+)\n\tEncoding : (?<Encoding>\w+)\n\tHash : (?<Hash>[\w\/\+=]+)", RegexOptions.Singleline);
+
+            string hash = "", function = "", encoding = ""; bool isValid = true;
+
             if (match.Success)
             {
-                Console.WriteLine(match.Groups["HashFunction"]);
-                Console.WriteLine(match.Groups["Encoding"]);
-                Console.WriteLine(match.Groups["Hash"]);
+                function = match.Groups["HashFunction"].Value;
+                encoding = match.Groups["Encoding"].Value;
+                hash = match.Groups["Hash"].Value;
             }
+            else
+                throw new Exception("Hash Section not readable");
+
+            file = Regex.Replace(file, @"----- BEGIN NEURALCRYPTO FILE -----\n", string.Empty);
+            file = Regex.Replace(file, @"\n----- END NEURALCRYPTO FILE -----\n", string.Empty);
+            file = Regex.Replace(file, @"Hash Section[^}]+}\n", string.Empty);
+
+            string GetEncoding(string encoding)
+            {
+                return encoding switch
+                {
+                    "0x64" => "base64",
+                    "0x16" => "hexadecimal",
+                    _ => throw new Exception("Invalid encoding"),
+                };
+            }
+
+            var realHash = SHAFunction.GetHash(file, function, GetEncoding(encoding));
+
+            if (hash != realHash)
+                isValid = false;
+
+            return (hash, realHash, isValid, function);
         }
     }
 
