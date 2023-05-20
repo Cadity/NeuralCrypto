@@ -2,6 +2,7 @@
 using NeuralCryptoFiles.Files.SignatureFile;
 using CryptoEngine.HashFunction;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace NeuralCryptoFiles.Files.FileFunction
 {
@@ -39,9 +40,13 @@ namespace NeuralCryptoFiles.Files.FileFunction
             return "NeuralCrypto Section\n{\n\tVersion : Alpha 1.0\n}";
         }
 
-        public static void Read()
+        public static string Read(string file)
         {
-
+            Match match = Regex.Match(file, @"NeuralCrypto Section\n{\n\tVersion : (?<Version>[^\n]+)");
+            if (match.Success)
+                return match.Groups["Version"].Value;
+            else
+                return "Undetected Version ; Can't verify version of NeuralCrypto !";
         }
     }
 
@@ -54,6 +59,18 @@ namespace NeuralCryptoFiles.Files.FileFunction
                 "Creation Date : " + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "\n\t" +
                 "Expiration Date : " + parameters.expirationDate.ToString("dd/MM/yyyy HH:mm") + "\n\t" +
                 "Author : " + parameters.author + "\n}";
+        }
+
+        public static (string, DateTime, DateTime, string) Read(string file)
+        {
+            Match match = Regex.Match(file, @"File Identity Section\n{\n\tType : (?<Type>[^\n]+)\n\tCreation Date : (?<CreationDate>[^\n]+)\n\tExpiration Date : (?<ExpirationDate>[^\n]+)\n\tAuthor : (?<Author>[^\n]+)");
+
+            if(match.Success)
+            {
+                return (match.Groups["Type"].Value, DateTime.ParseExact(match.Groups["CreationDate"].Value, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("fr-FR")), DateTime.ParseExact(match.Groups["ExpirationDate"].Value, "dd/MM/yyyy HH:mm", CultureInfo.CreateSpecificCulture("fr-FR")), match.Groups["Author"].Value);
+            }
+
+            throw new Exception("Critical : File Identity Section unreadable");
         }
     }
 
