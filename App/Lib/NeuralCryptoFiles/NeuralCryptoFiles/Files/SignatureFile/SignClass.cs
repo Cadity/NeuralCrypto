@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using CryptoEngine.HashFunction;
 using System.IO.Compression;
 
+// Create SignFile
 namespace NeuralCryptoFiles.Files.SignatureFile
 {
     public class MakeSignFile
@@ -115,3 +116,37 @@ namespace NeuralCryptoFiles.Files.SignatureFile
     }
 }
 
+// Read Sign File
+namespace NeuralCryptoFiles.Files.SignatureFile
+{
+    public class ReadSignFile
+    {
+        public ReadSignFile()
+        {
+
+        }
+    }
+
+    public enum FileStatut
+    {
+        Invalid, Partial, Missing, Valid
+    }
+
+    public class FoundedFile
+    {
+        public string name { get; set; }
+        public long size { get; set; }
+        public FileStatut statut { get; set; }
+    }
+
+    public class SignFilePacket
+    {
+        public string author { get; set; }
+        public string ncVersion { get; set; }
+        public string ncComment { get; set; }
+        public string userComment { get; set; }
+        public DateTime creationDate { get; set; }
+        public DateTime expirationDate { get; set; }
+        public PgpPublicKeyPacket signatoryKeyPacket { get; set; }
+    }
+}
