@@ -57,9 +57,13 @@
     <Compile Include="OpenPGP\PGPEncryption.cs" />
     <Compile Include="OpenPGP\PGPSignature.cs" />
     <Compile Include="OpenPGP\PGPReadKey.cs" />
+    <Compile Include="KeyUtilities\KeyUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="KeyUtilities\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

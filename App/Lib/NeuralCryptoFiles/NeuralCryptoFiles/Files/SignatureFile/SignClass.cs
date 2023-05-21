@@ -324,15 +324,10 @@ namespace NeuralCryptoFiles.Files.SignatureFile
             var content = "Auteur de la signature : " + packet.author + "\n" +
                 "Date d'émission : " + packet.creationDate.ToString("dddd d MMMM yyyy à HH:mm", new CultureInfo("fr-FR")) + "\n" +
                 "Date d'expiration : " + packet.expirationDate.ToString("dddd d MMMM yyyy à HH:mm", new CultureInfo("fr-FR")) + expirationStatut + "\n" +
-                "Version de NeuralCrypto à l'édition de la signature : " + packet.ncVersion;
+                "Version de NeuralCrypto à l'édition de la signature : " + packet.ncVersion + "\n" +
+                "Algorithme de hashage utilisé : " + packet.signatureFunction + " (Hash vérifié et valide)";
 
             list.Add(new Paragraph(content).SetFontSize(11).SetMultipliedLeading(1f));
-
-            list.Add(new Paragraph().Add("Propriétés de la Signature : \n").Add(new Tab())
-                .Add("Algorithme de hashage utilisé : " + packet.signatureFunction + "\n")
-                .Add(new Tab())
-                .Add("Hash : " + packet.signatureHash)
-                .SetFontSize(11).SetMultipliedLeading(1f));
 
             list.Add(new Paragraph("Commentaire généré par le logiciel").SetItalic().SetTextAlignment(TextAlignment.CENTER).SetFontSize(11));
             list.Add(new Paragraph(packet.ncComment).SetFontSize(11));
@@ -349,8 +344,42 @@ namespace NeuralCryptoFiles.Files.SignatureFile
 
             list.Add(new Paragraph("2. Détails de la clé publique du signataire").SetFontSize(13));
 
-            var content = "Nom de la clé : " + "\n" +
-                "Adresse-mail associée à la clé ";
+            string replaceNoneContent(string content)
+            {
+                return content switch
+                {
+                    "none" => "Non",
+                    _ => content,
+                };
+            }
+
+            string verifyExpirationDate(DateTime time)
+            {
+                if (time < DateTime.UtcNow.AddMilliseconds(1000))
+                    return "N'expire pas";
+                else
+                    return time.ToString("dd/MM/yyyy HH:mm");
+            }
+
+            string getAlgorithm(string algorithm)
+            {
+                return algorithm switch
+                {
+                    "RsaGeneral" => "RSA Chiffrant, RSA Signant",
+                    _ => "Autre"
+                };
+            }
+
+            var content = "Nom de la clé : " + packet.signatoryKeyPacket.username + "\n" +
+                "Adresse-mail associée à la clé " + replaceNoneContent(packet.signatoryKeyPacket.usermail) + "\n" +
+                "Commentaire de la clé : " + replaceNoneContent(packet.signatoryKeyPacket.keycomment) + "\n" +
+                "Algorithme de la clé : " + getAlgorithm(packet.signatoryKeyPacket.algorithm) + "\n" +
+                "Taille de la clé " + packet.signatoryKeyPacket.keySize + "\n" +
+                "Date de création de la clé : " + packet.signatoryKeyPacket.creationTime.ToString("dd/MM/yyyy HH:mm") + "\n" +
+                "Date d'expiration de la clé : " + verifyExpirationDate(packet.signatoryKeyPacket.expirationDate) + "\n" +
+                "Empreinte de clé publique : " + packet.signatoryKeyPacket.masterKeyFingerPrint;
+
+            list.Add(new Paragraph(content).SetFontSize(11).SetMultipliedLeading(1f));
 
             return list;
         }
