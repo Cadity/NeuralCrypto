@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{7712D57B-91E1-4305-89E0-93853B8D282D}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.NeuralCrypto PreferredExecutionTarget="MyMacID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="NeuralCrypto/Main/MainViewController.cs">
+    <Files>
+      <File FileName="NeuralCrypto/Main/MainViewController.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NeuralCrypto" expanded="True">
+            <Node name="NeuralCrypto" expanded="True">
+              <Node name="Main" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
