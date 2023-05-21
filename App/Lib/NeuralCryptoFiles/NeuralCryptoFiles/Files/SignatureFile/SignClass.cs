@@ -352,7 +352,6 @@ namespace NeuralCryptoFiles.Files.SignatureFile
             var content = "Nom de la clé : " + "\n" +
                 "Adresse-mail associée à la clé ";
 
-
             return list;
         }
     }

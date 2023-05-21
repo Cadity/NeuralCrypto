@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="NeuralCryptoFiles/Files/FileFunction/FileClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="NeuralCryptoFiles/Files/SignatureFile/SignClass.cs">
     <Files>
-      <File FileName="NeuralCryptoFiles/Files/SignatureFile/SignClass.cs" Line="122" Column="48" />
-      <File FileName="NeuralCryptoFiles/Files/FileFunction/FileClass.cs" Line="9" Column="37" />
+      <File FileName="NeuralCryptoFiles/Files/SignatureFile/SignClass.cs" Line="15" Column="1" />
+      <File FileName="NeuralCryptoFiles/Files/FileFunction/FileClass.cs" Line="5" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,10 +11,10 @@
           <Node name="NeuralCryptoFiles" expanded="True">
             <Node name="NeuralCryptoFiles" expanded="True">
               <Node name="Files" expanded="True">
-                <Node name="FileFunction" expanded="True">
-                  <Node name="FileClass.cs" selected="True" />
+                <Node name="FileFunction" expanded="True" />
+                <Node name="SignatureFile" expanded="True">
+                  <Node name="SignClass.cs" selected="True" />
                 </Node>
-                <Node name="SignatureFile" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -24,6 +23,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

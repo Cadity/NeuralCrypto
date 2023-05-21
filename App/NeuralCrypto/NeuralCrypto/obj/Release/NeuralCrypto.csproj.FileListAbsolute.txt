@@ -1,0 +1,16 @@
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/bin/Release/NeuralCrypto.exe
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/bin/Release/NeuralCrypto.pdb
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/actool/_PartialAppManifest.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/actool/_BundleResourceWithLogicalName.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/actool/_ProcessedImageAssetsPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/ibtool/_BundleResourceWithLogicalName.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/coremlc/_PartialAppManifest.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/coremlc/_BundleResourceWithLogicalName.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/_ProcessedBundleResourcesPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/_ProcessedContentPath.items
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/NeuralCrypto.csproj.AssemblyReference.cache
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/NeuralCrypto.csproj.CoreCompileInputs.cache
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/NeuralCrypto.exe
+/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/NeuralCrypto.pdb

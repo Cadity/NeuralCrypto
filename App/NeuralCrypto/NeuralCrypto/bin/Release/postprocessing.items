@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="NeuralCrypto.app/Contents/MacOS/NeuralCrypto">
+      <BCSymbolMapName>NeuralCrypto.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>NeuralCrypto.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto/obj/Release/mtouch-symbols.list</SymbolFile>
+      <DSymName>NeuralCrypto.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/antoinetavoillot/Desktop/NeuralCrypto/App/NeuralCrypto/NeuralCrypto</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
