@@ -9,6 +9,11 @@ using CryptoEngine.HashFunction;
 using System.IO.Compression;
 using System.Text.RegularExpressions;
 using System.Linq;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using System.Globalization;
 
 // Create SignFile
 namespace NeuralCryptoFiles.Files.SignatureFile
@@ -272,6 +277,83 @@ namespace NeuralCryptoFiles.Files.SignatureFile
 
                 files.Add(founded);
             });
+        }
+    }
+}
+
+// Make PDF File
+namespace NeuralCryptoFiles.Files.SignatureFile
+{
+    public static class SignFilePDF
+    {
+        public static void Make(string path, SignFilePacket packet)
+        {
+            PdfWriter writer = new PdfWriter(path);
+            PdfDocument pdf = new PdfDocument(writer);
+            Document document = new Document(pdf);
+
+            foreach (var element in Title_And_Intro()) document.Add(element);
+            foreach (var element in Signature_Info(packet)) document.Add(element);
+            foreach (var element in Signatory_Key_Info(packet)) document.Add(element);
+
+            document.Close();
+        }
+
+        private static List<Paragraph> Title_And_Intro()
+        {
+            var list = new List<Paragraph>();
+            list.Add(new Paragraph("Rapport d'analyse du fichier de Signature").SetFontSize(15).SetTextAlignment(TextAlignment.CENTER));
+
+            list.Add(new Paragraph("Rapport émis le " + DateTime.Now.ToString("dddd d MMMM yyyy à HH:mm", new CultureInfo("fr-FR")) + " par NeuralCrypto.").SetFontSize(11));
+
+            return list;
+        }
+
+        private static List<Paragraph> Signature_Info(SignFilePacket packet)
+        {
+            var list = new List<Paragraph>();
+
+            list.Add(new Paragraph("1. Détails de la signature").SetFontSize(13));
+
+            var expirationStatut = "";
+            if (packet.expirationDate > packet.creationDate)
+                expirationStatut = " (Valide à cette date)";
+            else
+                expirationStatut = " (Expiré)";
+
+            var content = "Auteur de la signature : " + packet.author + "\n" +
+                "Date d'émission : " + packet.creationDate.ToString("dddd d MMMM yyyy à HH:mm", new CultureInfo("fr-FR")) + "\n" +
+                "Date d'expiration : " + packet.expirationDate.ToString("dddd d MMMM yyyy à HH:mm", new CultureInfo("fr-FR")) + expirationStatut + "\n" +
+                "Version de NeuralCrypto à l'édition de la signature : " + packet.ncVersion;
+
+            list.Add(new Paragraph(content).SetFontSize(11).SetMultipliedLeading(1f));
+
+            list.Add(new Paragraph().Add("Propriétés de la Signature : \n").Add(new Tab())
+                .Add("Algorithme de hashage utilisé : " + packet.signatureFunction + "\n")
+                .Add(new Tab())
+                .Add("Hash : " + packet.signatureHash)
+                .SetFontSize(11).SetMultipliedLeading(1f));
+
+            list.Add(new Paragraph("Commentaire généré par le logiciel").SetItalic().SetTextAlignment(TextAlignment.CENTER).SetFontSize(11));
+            list.Add(new Paragraph(packet.ncComment).SetFontSize(11));
+
+            list.Add(new Paragraph("Commentaire du Signataire").SetItalic().SetTextAlignment(TextAlignment.CENTER).SetFontSize(11));
+            list.Add(new Paragraph(packet.userComment).SetFontSize(11));
+
+            return list;
+        }
+
+        private static List<Paragraph> Signatory_Key_Info(SignFilePacket packet)
+        {
+            var list = new List<Paragraph>();
+
+            list.Add(new Paragraph("2. Détails de la clé publique du signataire").SetFontSize(13));
+
+            var content = "Nom de la clé : " + "\n" +
+                "Adresse-mail associée à la clé ";
+
+
+            return list;
         }
     }
 }
