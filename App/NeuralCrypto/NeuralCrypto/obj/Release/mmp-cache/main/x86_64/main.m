@@ -1,5 +1,8 @@
+extern "C" void xamarin_create_classes();
+
 static void xamarin_invoke_registration_methods ()
 {
+	xamarin_create_classes();
 }
 
 #define MONOMAC 1
@@ -15,7 +18,6 @@ extern "C" int xammac_setup ()
 	xamarin_marshal_objectivec_exception_mode = MarshalObjectiveCExceptionModeDisable;
 	xamarin_disable_lldb_attach = true;
 
-	xamarin_create_classes ();
 	setenv ("MONO_GC_PARAMS", "major=marksweep", 1);
 	xamarin_supports_dynamic_registration = TRUE;
 	xamarin_mac_modern = TRUE;

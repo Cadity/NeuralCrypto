@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		369954500000000000000000 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B63F7100000000000000000 /* Cocoa.framework */; };
+		683B00000000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA130100000000000000000 /* Foundation.framework */; };
+		FAAB0F000000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0038A000000000000000000 /* Assets.xcassets */; };
+		3501FDB00000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D11EB300000000000000000 /* Info.plist */; };
+		5A144B000000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32AB6A400000000000000000 /* Entitlements.plist */; };
+		806BC7000000000000000000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CA06000000000000000000 /* Main.storyboard */; };
+		A21A38000000000000000000 /* KeyGenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2EC0000000000000000000 /* KeyGenStoryboard.storyboard */; };
+		34A4C0600000000000000000 /* AESKeyGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CAC3B00000000000000000 /* AESKeyGen.m */; };
+		2820E1800000000000000000 /* KeyGenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2927EDF00000000000000000 /* KeyGenController.m */; };
+		32675D700000000000000000 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2492000000000000000000 /* MainViewController.m */; };
+		32B492A00000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85927F000000000000000000 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B2267A000000000000000000 /* NeuralCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "NeuralCrypto.app"; path = "NeuralCrypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B63F7100000000000000000 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cocoa.framework"; path = "System/Library/Frameworks/Cocoa.framework"; sourceTree = SDKROOT; };
+		3AA130100000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		D0038A000000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		1D11EB300000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		32AB6A400000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		83CA06000000000000000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Main.storyboard"; path = "Main/Main.storyboard"; sourceTree = "<group>"; };
+		1B2EC0000000000000000000 /* KeyGenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "KeyGenStoryboard.storyboard"; path = "KeyGen/KeyGenStoryboard.storyboard"; sourceTree = "<group>"; };
+		2435A4C00000000000000000 /* AESKeyGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AESKeyGen.h"; path = "KeyGen/AES/AESKeyGen.h"; sourceTree = "<group>"; };
+		19CAC3B00000000000000000 /* AESKeyGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AESKeyGen.m"; path = "KeyGen/AES/AESKeyGen.m"; sourceTree = "<group>"; };
+		5E2CAE000000000000000000 /* KeyGenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "KeyGenController.h"; path = "KeyGen/KeyGenController.h"; sourceTree = "<group>"; };
+		2927EDF00000000000000000 /* KeyGenController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "KeyGenController.m"; path = "KeyGen/KeyGenController.m"; sourceTree = "<group>"; };
+		34F922100000000000000000 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainViewController.h"; path = "Main/MainViewController.h"; sourceTree = "<group>"; };
+		5A2492000000000000000000 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainViewController.m"; path = "Main/MainViewController.m"; sourceTree = "<group>"; };
+		1CC232F00000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		85927F000000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D3CA7000000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369954500000000000000000 /* Cocoa.framework in Frameworks */,
+				683B00000000000000000000 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19721E400000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				250310500000000000000000 /* NeuralCrypto */,
+				D1B935000000000000000000 /* Frameworks */,
+				35F82E400000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35F82E400000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2267A000000000000000000 /* NeuralCrypto.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		D1B935000000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA130100000000000000000 /* Foundation.framework */,
+				2B63F7100000000000000000 /* Cocoa.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		250310500000000000000000 /* NeuralCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				1CC232F00000000000000000 /* AppDelegate.h */,
+				85927F000000000000000000 /* AppDelegate.m */,
+				D0038A000000000000000000 /* Assets.xcassets */,
+				32AB6A400000000000000000 /* Entitlements.plist */,
+				1D11EB300000000000000000 /* Info.plist */,
+				25B9A0C00000000000000000 /* KeyGen */,
+				1386A6C00000000000000000 /* Main */,
+			);
+			name = "NeuralCrypto";
+			sourceTree = "<group>";
+		};
+		1386A6C00000000000000000 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				83CA06000000000000000000 /* Main.storyboard */,
+				34F922100000000000000000 /* MainViewController.h */,
+				5A2492000000000000000000 /* MainViewController.m */,
+			);
+			name = "Main";
+			sourceTree = "<group>";
+		};
+		25B9A0C00000000000000000 /* KeyGen */ = {
+			isa = PBXGroup;
+			children = (
+				5E2CAE000000000000000000 /* KeyGenController.h */,
+				2927EDF00000000000000000 /* KeyGenController.m */,
+				1B2EC0000000000000000000 /* KeyGenStoryboard.storyboard */,
+				2FBBDCE00000000000000000 /* AES */,
+			);
+			name = "KeyGen";
+			sourceTree = "<group>";
+		};
+		2FBBDCE00000000000000000 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				2435A4C00000000000000000 /* AESKeyGen.h */,
+				19CAC3B00000000000000000 /* AESKeyGen.m */,
+			);
+			name = "AES";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D9AC4400000000000000000 /* NeuralCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A70E6500000000000000000 /* Build configuration list for PBXNativeTarget "NeuralCrypto" */;
+			buildPhases = (
+				2DF819400000000000000000 /* Sources */,
+				2D3CA7000000000000000000 /* Frameworks */,
+				1DB8E3900000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NeuralCrypto";
+			productName = "NeuralCrypto";
+			productReference = B2267A000000000000000000 /* NeuralCrypto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B80005000000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 278003100000000000000000 /* Build configuration list for PBXProject "NeuralCrypto" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 19721E400000000000000000;
+			productRefGroup = 35F82E400000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D9AC4400000000000000000 /* NeuralCrypto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DB8E3900000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAB0F000000000000000000 /* Assets.xcassets in Resources */,
+				3501FDB00000000000000000 /* Info.plist in Resources */,
+				5A144B000000000000000000 /* Entitlements.plist in Resources */,
+				806BC7000000000000000000 /* Main.storyboard in Resources */,
+				A21A38000000000000000000 /* KeyGenStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DF819400000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34A4C0600000000000000000 /* AESKeyGen.m in Sources */,
+				2820E1800000000000000000 /* KeyGenController.m in Sources */,
+				32675D700000000000000000 /* MainViewController.m in Sources */,
+				32B492A00000000000000000 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23801BE00000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3F80FB600000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3B88D6800000000000000000 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		17CF8AF00000000000000000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278003100000000000000000 /* Build configuration list for PBXProject "NeuralCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23801BE00000000000000000 /* Debug */,
+				3F80FB600000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1A70E6500000000000000000 /* Build configuration list for PBXNativeTarget "NeuralCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B88D6800000000000000000 /* Debug */,
+				17CF8AF00000000000000000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B80005000000000000000000 /* Project object */;
+}

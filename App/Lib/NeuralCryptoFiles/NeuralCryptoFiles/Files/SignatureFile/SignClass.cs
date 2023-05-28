@@ -14,6 +14,8 @@ using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using System.Globalization;
+using CryptoEngine.KeyUtilities;
+using System.Net;
 
 // Create SignFile
 namespace NeuralCryptoFiles.Files.SignatureFile
@@ -295,6 +297,7 @@ namespace NeuralCryptoFiles.Files.SignatureFile
             foreach (var element in Title_And_Intro()) document.Add(element);
             foreach (var element in Signature_Info(packet)) document.Add(element);
             foreach (var element in Signatory_Key_Info(packet)) document.Add(element);
+            foreach (var element in File_Report(packet)) document.Add(element);
 
             document.Close();
         }
@@ -373,15 +376,29 @@ namespace NeuralCryptoFiles.Files.SignatureFile
             var content = "Nom de la clé : " + packet.signatoryKeyPacket.username + "\n" +
                 "Adresse-mail associée à la clé " + replaceNoneContent(packet.signatoryKeyPacket.usermail) + "\n" +
                 "Commentaire de la clé : " + replaceNoneContent(packet.signatoryKeyPacket.keycomment) + "\n" +
-                "Algorithme de la clé : " + getAlgorithm(packet.signatoryKeyPacket.algorithm) + "\n" +
-                "Taille de la clé " + packet.signatoryKeyPacket.keySize + "\n" +
-                "Date de création de la clé : " + packet.signatoryKeyPacket.creationTime.ToString("dd/MM/yyyy HH:mm") + "\n" +
-                "Date d'expiration de la clé : " + verifyExpirationDate(packet.signatoryKeyPacket.expirationDate) + "\n" +
+                "Algorithme de la clé : " + KeyUtilities.GetAlgorithm(packet.signatoryKeyPacket.algorithm) + "\n" +
+                "Taille de la clé : " + packet.signatoryKeyPacket.keySize + " bits\n" +
+                "Date de création de la clé : " + packet.signatoryKeyPacket.creationTime.ToString("dd/MM/yyyy à HH:mm") + "\n" +
+                "Date d'expiration de la clé : " + KeyUtilities.TestKeyValidity(packet.signatoryKeyPacket.expirationDate) + "\n" +
                 "Empreinte de clé publique : " + packet.signatoryKeyPacket.masterKeyFingerPrint;
 
             list.Add(new Paragraph(content).SetFontSize(11).SetMultipliedLeading(1f));
 
             return list;
         }
+
+        private static List<Paragraph> File_Report(SignFilePacket packet)
+        {
+            var list = new List<Paragraph>();
+
+            list.Add(new Paragraph("3. Résultat d'analyse du fichier de signature").SetFontSize(13));
+
+            list.Add(new Paragraph("Fichiers localisés dans le fichier : \n")
+                .Add(new Tab()).Add("Nombre de fichiers total : " + packet.files.Count)
+                .Add(new Tab()).Add("Nombre de fichiers ayant reçu le statut Valide : " + (packet.files.Count - packet.invalidFiles)).SetFontSize(11).SetMultipliedLeading(1f));
+
+            return list;
+        }
+
     }
 }

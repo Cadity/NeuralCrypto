@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="4h1-mH-VLv">
+            <objects>
+                <windowController storyboardIdentifier="AESWindow" id="cb1-rJ-f1i" sceneMemberID="viewController">
+                    <window key="window" title="Générer une Clé Symétrique" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Kuy-vE-PWj">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <rect key="contentRect" x="294" y="324" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <view key="contentView" id="55F-7x-9rX">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="cb1-rJ-f1i" id="Ffs-B3-IGp"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="Uat-SJ-bx1" kind="relationship" relationship="window.shadowedContentViewController" id="zgi-hE-Zos"/>
+                    </connections>
+                </windowController>
+                <customObject id="hgZ-Pq-9dt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="-169"/>
+        </scene>
+        <!--Key Gen-->
+        <scene sceneID="3ej-ip-cUc">
+            <objects>
+                <viewController id="Uat-SJ-bx1" customClass="AESKeyGen" sceneMemberID="viewController">
+                    <view key="view" id="v63-1v-kBA">
+                        <rect key="frame" x="0.0" y="0.0" width="516" height="315"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sta-rN-1hR">
+                                <rect key="frame" x="18" y="279" width="199" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Remplissez les champs suivants" id="VLr-Hd-vnc">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box fixedFrame="YES" title="Paramètre de la clé symétrique" translatesAutoresizingMaskIntoConstraints="NO" id="Zjb-SS-2Wu">
+                                <rect key="frame" x="17" y="165" width="482" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="NGP-iZ-KaD">
+                                    <rect key="frame" x="4" y="5" width="474" height="77"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFc-zD-VFm">
+                                            <rect key="frame" x="8" y="46" width="132" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Algorithme de la clé :" id="gaT-zG-qEY">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-nr-ITx">
+                                            <rect key="frame" x="8" y="15" width="132" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Taille de la clé (bits) :" id="VUK-YY-4KR">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LEa-c5-oi5">
+                                            <rect key="frame" x="141" y="39" width="227" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <popUpButtonCell key="cell" type="push" title="Advanced Encryption Standard" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3Cc-kL-Uuq" id="dTt-fq-vCn">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="fv4-Ot-HnA">
+                                                    <items>
+                                                        <menuItem title="Advanced Encryption Standard" state="on" id="3Cc-kL-Uuq"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-jH-bhM">
+                                            <rect key="frame" x="141" y="8" width="81" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <popUpButtonCell key="cell" type="push" title="128" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kug-nj-0Oo" id="EUy-D1-quD">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="MBK-6c-vj1">
+                                                    <items>
+                                                        <menuItem title="128" state="on" id="Kug-nj-0Oo"/>
+                                                        <menuItem title="192" id="Zty-Pr-NK6"/>
+                                                        <menuItem title="256" id="bsY-Dc-1uS"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="KeySizeButton:" target="Uat-SJ-bx1" id="lWh-a2-00R"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </subviews>
+                                </view>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box fixedFrame="YES" title="Clé générée (base 64)" translatesAutoresizingMaskIntoConstraints="NO" id="xAL-72-r7W">
+                                <rect key="frame" x="17" y="56" width="482" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="TlW-Mz-FaV">
+                                    <rect key="frame" x="4" y="5" width="474" height="77"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-9U-Buw">
+                                            <rect key="frame" x="8" y="46" width="448" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Bloc d'entrée : None" id="iYc-KE-B0e">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzH-Ys-3zT">
+                                            <rect key="frame" x="8" y="15" width="448" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Vecteur d'initialisation : None" id="k5v-ZH-zDm">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Car-nL-QUu">
+                                <rect key="frame" x="357" y="13" width="146" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Sauvegarder la clé" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EFP-tM-pam">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="EntryBloc" destination="cwW-9U-Buw" id="wgx-7U-oXl"/>
+                        <outlet property="IV" destination="bzH-Ys-3zT" id="ZRf-kb-Iim"/>
+                        <outlet property="KeySizeOutlet" destination="0Jw-jH-bhM" id="x3v-J0-Pad"/>
+                    </connections>
+                </viewController>
+                <customObject id="woe-CU-89I" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="276.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="xYh-rp-SBx">
+            <objects>
+                <windowController storyboardIdentifier="KeyGenMain" id="NuR-vB-ONo" sceneMemberID="viewController">
+                    <window key="window" title="Générer une clé de chiffrement" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="zOQ-4j-N9C">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="294" y="324" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <view key="contentView" id="XyL-gm-gIt">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="NuR-vB-ONo" id="lHT-Vz-ep1"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="Szj-lh-CCO" kind="relationship" relationship="window.shadowedContentViewController" id="hfl-yh-riX"/>
+                    </connections>
+                </windowController>
+                <customObject id="GkD-68-DPT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-182"/>
+        </scene>
+        <!--Key Gen Controller-->
+        <scene sceneID="WJv-OW-VD7">
+            <objects>
+                <viewController id="Szj-lh-CCO" customClass="KeyGenController" sceneMemberID="viewController">
+                    <view key="view" id="3BU-0d-78E">
+                        <rect key="frame" x="0.0" y="0.0" width="565" height="296"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9CS-PT-hLi">
+                                <rect key="frame" x="18" y="260" width="411" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Sélectionner le type de clé pour votre nouvelle clé cryptographique" id="wBT-5N-Han">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T45-Jp-5Ya">
+                                <rect key="frame" x="18" y="72" width="258" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" id="E0P-hF-tJO">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <string key="title">Une clé pour tout gérer.
+Chiffrer facilement et rapidement tout types de données, même les plus volumineuses en conservant une très bonne sécurité. 
+
+Sécurité : Bonne
+Performance : Excellente</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssr-yk-I5G">
+                                <rect key="frame" x="295" y="72" width="258" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" id="Fbb-1G-sdB">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <string key="title">Deux clés, l'une chiffre, l'autre déchiffre.
+Efficace et robuste, parfait pour chiffrer des messages ou des petites données sensibles. Et vous pouvez émettre une signature
+
+Sécurité : Excellente,
+Performance : Variable selon l'algorithme</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Erz-jC-62F">
+                                <rect key="frame" x="87" y="215" width="109" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Clé Symétrique" id="dTl-3M-irx">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVo-we-DUM">
+                                <rect key="frame" x="366" y="215" width="117" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Clé Asymétrique" id="J7E-d7-P3y">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="SSq-tP-Jnl">
+                                <rect key="frame" x="280" y="20" width="5" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-06-wYL">
+                                <rect key="frame" x="157" y="13" width="116" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Créer une clé" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tH9-uv-JNc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="CreateSymetricKey:" target="Szj-lh-CCO" id="dOC-pa-SdV"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xT7-Bs-2Ko">
+                                <rect key="frame" x="436" y="13" width="116" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Créer une clé" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hiK-HO-RzM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="81r-Kq-kYf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="267"/>
+        </scene>
+    </scenes>
+</document>

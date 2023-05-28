@@ -12,6 +12,8 @@ namespace NeuralCrypto.Main
 	[Register ("MainViewController")]
 	partial class MainViewController
 	{
+		[Action ("KeyGenButton:")]
+		partial void KeyGenButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

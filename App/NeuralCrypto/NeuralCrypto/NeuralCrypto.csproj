@@ -47,6 +47,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="CryptoEngine">
+      <HintPath>..\..\Lib\CryptoEngine\CryptoEngine\bin\Release\CryptoEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -64,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="KeyGen\AES\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -76,9 +80,18 @@
     <Compile Include="Main\MainViewController.designer.cs">
       <DependentUpon>MainViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="KeyGen\KeyGenController.cs" />
+    <Compile Include="KeyGen\KeyGenController.designer.cs">
+      <DependentUpon>KeyGenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyGen\AES\AESKeyGen.cs" />
+    <Compile Include="KeyGen\AES\AESKeyGen.designer.cs">
+      <DependentUpon>AESKeyGen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main\Main.storyboard" />
+    <InterfaceDefinition Include="KeyGen\KeyGenStoryboard.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

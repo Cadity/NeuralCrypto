@@ -1,29 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <_BundleResourceWithLogicalName Include="obj/Release/ibtool/Main.storyboardc/MainMenu.nib">
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/KeyGenStoryboard.storyboardc/KeyGenMain.nib">
       <Optimize>false</Optimize>
-      <InterfaceDefinition>Main/Main.storyboard</InterfaceDefinition>
+      <LogicalName>KeyGenStoryboard.storyboardc/KeyGenMain.nib</LogicalName>
+      <OriginalItemSpec>obj/Release/ibtool-link/KeyGenStoryboard.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/KeyGenStoryboard.storyboardc/Szj-lh-CCO-view-3BU-0d-78E.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>KeyGenStoryboard.storyboardc/Szj-lh-CCO-view-3BU-0d-78E.nib</LogicalName>
+      <OriginalItemSpec>obj/Release/ibtool-link/KeyGenStoryboard.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/KeyGenStoryboard.storyboardc/Info.plist">
+      <Optimize>false</Optimize>
+      <LogicalName>KeyGenStoryboard.storyboardc/Info.plist</LogicalName>
+      <OriginalItemSpec>obj/Release/ibtool-link/KeyGenStoryboard.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/KeyGenStoryboard.storyboardc/AESWindow.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>KeyGenStoryboard.storyboardc/AESWindow.nib</LogicalName>
+      <OriginalItemSpec>obj/Release/ibtool-link/KeyGenStoryboard.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/KeyGenStoryboard.storyboardc/Uat-SJ-bx1-view-v63-1v-kBA.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>KeyGenStoryboard.storyboardc/Uat-SJ-bx1-view-v63-1v-kBA.nib</LogicalName>
+      <OriginalItemSpec>obj/Release/ibtool-link/KeyGenStoryboard.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/Main.storyboardc/MainMenu.nib">
+      <Optimize>false</Optimize>
       <LogicalName>Main.storyboardc/MainMenu.nib</LogicalName>
-      <OriginalItemSpec>obj/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+      <OriginalItemSpec>obj/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/Release/ibtool/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib">
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib">
       <Optimize>false</Optimize>
-      <InterfaceDefinition>Main/Main.storyboard</InterfaceDefinition>
       <LogicalName>Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</LogicalName>
-      <OriginalItemSpec>obj/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+      <OriginalItemSpec>obj/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/Release/ibtool/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib">
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib">
       <Optimize>false</Optimize>
-      <InterfaceDefinition>Main/Main.storyboard</InterfaceDefinition>
       <LogicalName>Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</LogicalName>
-      <OriginalItemSpec>obj/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+      <OriginalItemSpec>obj/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
-    <_BundleResourceWithLogicalName Include="obj/Release/ibtool/Main.storyboardc/Info.plist">
+    <_BundleResourceWithLogicalName Include="obj/Release/ibtool-link/Main.storyboardc/Info.plist">
       <Optimize>false</Optimize>
-      <InterfaceDefinition>Main/Main.storyboard</InterfaceDefinition>
       <LogicalName>Main.storyboardc/Info.plist</LogicalName>
-      <OriginalItemSpec>obj/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+      <OriginalItemSpec>obj/Release/ibtool-link/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
   </ItemGroup>
 </Project>

@@ -25,6 +25,8 @@
 @class __NSRotationGestureRecognizer;
 @class __NSObject_Disposer;
 @class AppDelegate;
+@class KeyGenController;
+@class AESKeyGen;
 @class MainViewController;
 
 @interface NSApplicationDelegate : NSObject<NSApplicationDelegate> {
@@ -67,6 +69,40 @@
 	-(id) init;
 @end
 
+@interface KeyGenController : NSViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) CreateSymetricKey:(NSObject *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface AESKeyGen : NSViewController {
+}
+	@property (nonatomic, assign) NSTextField * EntryBloc;
+	@property (nonatomic, assign) NSTextField * IV;
+	@property (nonatomic, assign) NSPopUpButton * KeySizeOutlet;
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(NSTextField *) EntryBloc;
+	-(void) setEntryBloc:(NSTextField *)p0;
+	-(NSTextField *) IV;
+	-(void) setIV:(NSTextField *)p0;
+	-(NSPopUpButton *) KeySizeOutlet;
+	-(void) setKeySizeOutlet:(NSPopUpButton *)p0;
+	-(void) viewDidDisappear;
+	-(void) KeySizeButton:(NSObject *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface MainViewController : NSViewController {
 }
 	-(void) release;
@@ -75,6 +111,7 @@
 	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
 	-(enum XamarinGCHandleFlags) xamarinGetFlags;
 	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) KeyGenButton:(NSObject *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 

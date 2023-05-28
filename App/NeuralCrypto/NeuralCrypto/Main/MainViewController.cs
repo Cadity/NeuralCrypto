@@ -11,5 +11,12 @@ namespace NeuralCrypto.Main
 		public MainViewController (IntPtr handle) : base (handle)
 		{
 		}
-	}
+
+        partial void KeyGenButton(NSObject sender)
+        {
+            var storyboard = NSStoryboard.FromName("KeyGenStoryboard", null);
+            var controller = storyboard.InstantiateControllerWithIdentifier("KeyGenMain") as NSWindowController;
+            controller.ShowWindow(this);
+        }
+    }
 }
